@@ -4,6 +4,10 @@ x-php-service: &php-service
   build:
     context: .
     dockerfile: docker/php/Dockerfile
+  environment:
+    TMPDIR: /tmp
+    TEMP: /tmp
+    TMP: /tmp
   restart: unless-stopped
   networks:
     - laravel
